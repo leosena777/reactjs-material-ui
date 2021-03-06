@@ -1,14 +1,25 @@
 import './ChatListItem.css';
-import avatar from '../../img/img_avatar.png'; // Tell webpack this JS file uses this image
+import { ChatList } from '../../App';
+
+export interface ChatListItemProps {
+  onClick(): void;
+  active: boolean;
+  data: ChatList;
+}
+
+export function ChatListItem({onClick, active, data }: ChatListItemProps ): JSX.Element {
+
+  const isActive = (): string => {
+    return active ? 'active': '';
+  }
 
 
-export function ChatListItem(): JSX.Element {
   return(
-    <div className="chatListItem">
-      <img className="chatListItem-avatar" src={avatar} alt=""/>
+    <div className={`chatListItem ${isActive()}`} onClick={onClick}>
+      <img className="chatListItem-avatar" src={data.img} alt=""/>
       <div className="chatListItem-lines">
         <div className="chatListItem-line">
-            <div className="chatListItem-name"> Leandro sena</div>
+            <div className="chatListItem-name"> {data.name}</div>
             <div className="chatListItem-date"> 19:00</div>
         </div>
         <div className="chatListItem-line">
