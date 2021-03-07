@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './App.css';
 import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import ChatIcon from '@material-ui/icons/Chat';
@@ -14,7 +14,7 @@ export interface ChatList {
 }
 
 function App(): JSX.Element {
-  const [chatList, setChatList] = useState<ChatList[]>([
+  const [chatList] = useState<ChatList[]>([
     {
       chatId: 1,
       name: 'Leandro sena',

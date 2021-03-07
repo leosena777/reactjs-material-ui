@@ -26,6 +26,9 @@
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "react/require-default-props": "off",
+    "react/button-has-type": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react/no-static-element-interactions": "off",
     "prettier/prettier": "error",
     "react/jsx-indent": "off",
     "react/jsx-indent-props": "off",
@@ -49,10 +52,7 @@
     "@typescript-eslint/no-use-before-define": "off",
     "import/no-unresolved": "off",
     "no-console": ["warn", { "allow": ["error", "info", "clear"] }],
-    "react/jsx-wrap-multilines": [
-      "warn",
-      { "declaration": false, "assignment": false }
-    ],
+    "react/jsx-wrap-multilines": ["warn", { "declaration": false, "assignment": false }],
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-unused-vars": [
       "warn",
@@ -65,6 +65,8 @@
       "error",
       "ignorePackages",
       {
+        "js": "never",
+        "jsx": "never",
         "ts": "never",
         "tsx": "never"
       }
